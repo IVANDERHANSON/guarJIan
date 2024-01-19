@@ -1,0 +1,286 @@
+:root {
+    --color1: #ffffff;
+    --color2: #ffdb00;
+    --color3: #ff5100;
+    --color4: rgba(255, 255, 255, 95%);
+    --color5: rgba(0, 0, 0, 0.3);
+    --color6: rgba(0, 0, 0, 0.1);
+    --color7: rgb(247, 227, 160);
+    --color8: rgb(255, 152, 104);
+    --color9: #000000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Open Sans';
+    background-color: var(--color1);
+    color: var(--color2);
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    border-bottom: 1px solid var(--color6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: var(--color4);
+}
+.navBar .logo {
+    display: contents;
+}
+#logo {
+    height: 6vh;
+    width: 30vh;
+}
+.navBar .navBar1 a {
+    color: var(--color2);
+    display: inline-block;
+    margin: 0 16px;
+    transition: 0.3s linear;
+    font-size: larger;
+}
+.navBar .navBar1 a:hover {
+    color: var(--color3);
+}
+.navBar .navBar1 a::after {
+    content: '';
+    display: block;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color3);
+    transform: scaleX(0);
+    transition: 0.3s linear;
+}
+.navBar .navBar1 a:hover::after {
+    transform: scaleX(1);
+}
+#x {
+    display: none;
+}
+#contactUs {
+    margin-right: 0px;
+    color: var(--color3);
+    border-bottom: 1px solid var(--color3);
+    transform: scaleX(1);
+}
+#contactUs:hover::after {
+    transform: scaleX(0);
+}
+#hamburgerMenu {
+    color: var(--color2);
+    transition: 0.3s linear;
+    display: none;
+}
+#hamburgerMenu:hover {
+    color: var(--color3);
+}
+
+.contact {
+    margin: 150px;
+    padding: 50px 5%;
+    text-align: center;
+    background-color: var(--color1);
+    box-shadow: 0px 0px 19px 5px var(--color7);
+    border-radius: 30px;
+    font-size: larger;
+}
+.contact img {
+    width: 10%;
+    height: 10%;
+}
+.contact h1 {
+    color: var(--color3);
+    margin-bottom: 20px;
+}
+.contact p {
+    color: var(--color3);
+    margin-bottom: 40px;
+}
+.contactForm {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.contactForm label {
+    color: var(--color3);
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+.contactForm input,
+.contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--color2);
+    border-radius: 30px;
+    transition: 0.3s linear;
+    font-size: large;
+    font-family: 'Open Sans';
+}
+.contactForm input:hover,
+.contactForm input:focus,
+.contactForm textarea:hover,
+.contactForm textarea:focus {
+    border: 1px solid var(--color3);
+}
+.contactForm textarea {
+    resize: none;
+}
+.contactForm button {
+    background-color: var(--color2);
+    color: var(--color1);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s linear;
+    font-size: larger;
+}
+.contactForm button:hover {
+    background-color: var(--color3);
+}
+#checkbox {
+    width: 20px;
+    height: 20px;
+}
+
+.footer {
+    bottom: 0;
+    background-color: var(--color2);
+    color: var(--color1);
+    text-align: center;
+    padding: 32px 0;
+}
+.footer .socialMedia {
+    padding: 16px 0;
+}
+.footer .socialMedia a {
+    color: var(--color1);
+    margin: 0px 16px;
+}
+.footer .socialMedia a:hover {
+    color: var(--color3);
+}
+.footer .link {
+    padding: 16px 0;
+}
+.footer .link a {
+    color: var(--color1);
+    margin: 0px 16px;
+}
+.footer .link a:hover {
+    color: var(--color3);
+}
+.footer .credit {
+    padding: 16px 0;
+}
+.footer .credit span {
+    color: var(--color3);
+}
+
+/* Laptop */
+@media(max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* Tablet */
+@media(max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+    
+    #x {
+        width: fit-content;
+        height: 40px;
+        margin-left: 75%;
+        display: inline-block;
+    }
+
+    #hamburgerMenu {
+        display: inline-block;
+    }
+
+    .navBar .navBar1 {
+        position: absolute;
+        top: 0;
+        right: -100%;
+        background-color: var(--color3);
+        width: 250px;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    .navBar .navBar1.active {
+        right: 0;
+    }
+
+    .navBar .navBar1 a {
+        color: var(--color1);
+        display: block;
+        margin: 24px;
+        padding: 8px;
+        width: fit-content;
+        transition: 0.3s linear;
+        font-size: 16px;
+    }
+    .navBar .navBar1 a:hover {
+        color: var(--color2);
+    }
+    .navBar .navBar1 a::after {
+        content: '';
+        display: block;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--color2);
+        transform: scaleX(0);
+        transition: 0.3s linear;
+        transform-origin: 0 0;
+    }
+    .navBar .navBar1 a:hover::after {
+        transform: scaleX(1);
+    }
+
+    #x::after {
+        border-bottom: none;
+    }
+    #x:hover::after {
+        border-bottom: none;
+        transform: scaleX(1);
+    }
+    #contactUs {
+        color: var(--color2);
+        border-bottom: none;
+        transform: scaleX(1);
+    }
+    #contactUs::after {
+        border-bottom: 1px solid var(--color2);
+        transform: scaleX(1);
+    }
+    #contactUs:hover::after {
+        transform: scaleX(1);
+    }
+}
+
+/* Mobile */
+@media(max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}

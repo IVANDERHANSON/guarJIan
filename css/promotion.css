@@ -1,0 +1,280 @@
+:root {
+    --color1: #ffffff;
+    --color2: #ffdb00;
+    --color3: #ff5100;
+    --color4: rgba(255, 255, 255, 95%);
+    --color5: rgba(0, 0, 0, 0.3);
+    --color6: rgba(0, 0, 0, 0.1);
+    --color7: rgb(247, 227, 160);
+    --color8: rgb(255, 152, 104);
+    --color9: #000000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Open Sans';
+    background-color: var(--color1);
+    color: var(--color2);
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    border-bottom: 1px solid var(--color6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: var(--color4);
+}
+.navBar .logo {
+    display: contents;
+}
+#logo {
+    height: 6vh;
+    width: 30vh;
+}
+.navBar .navBar1 a {
+    color: var(--color2);
+    display: inline-block;
+    margin: 0 16px;
+    transition: 0.3s linear;
+    font-size: larger;
+}
+.navBar .navBar1 a:hover {
+    color: var(--color3);
+}
+.navBar .navBar1 a::after {
+    content: '';
+    display: block;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color3);
+    transform: scaleX(0);
+    transition: 0.3s linear;
+}
+.navBar .navBar1 a:hover::after {
+    transform: scaleX(1);
+}
+#x {
+    display: none;
+}
+#promotion {
+    color: var(--color3);
+    border-bottom: 1px solid var(--color3);
+    transform: scaleX(1);
+}
+#promotion:hover::after {
+    transform: scaleX(0);
+}
+#contactUs {
+    margin-right: 0px;
+}
+#hamburgerMenu {
+    color: var(--color2);
+    transition: 0.3s linear;
+    display: none;
+}
+#hamburgerMenu:hover {
+    color: var(--color3);
+}
+
+.category {
+    background-color: var(--color1);
+    padding: 10% 10%;
+}
+.category h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 50px;
+}
+.category h1 span {
+    color: var(--color9);
+}
+.category .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 120px;
+}
+.category .card {
+    width: 300px;
+    background-color: var(--color1);
+    color: var(--color3);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px 5px var(--color7);
+    transition: 0.3s linear;
+    cursor: pointer;
+}
+.category .card:hover {
+    box-shadow: 0px 0px 10px 5px var(--color8);
+}
+.category .card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+.category .card h2 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+.category .card h2 span {
+    color: var(--color2);
+}
+.category .card p {
+    color: var(--color9);
+    margin-top: 10px;
+}
+.category .card p span {
+    text-decoration: line-through;
+}
+.category .card .price {
+    color: var(--color3);
+    font-size: 20px;
+}
+
+.footer {
+    bottom: 0;
+    background-color: var(--color2);
+    color: var(--color1);
+    text-align: center;
+    padding: 32px 0;
+}
+.footer .socialMedia {
+    padding: 16px 0;
+}
+.footer .socialMedia a {
+    color: var(--color1);
+    margin: 0px 16px;
+}
+.footer .socialMedia a:hover {
+    color: var(--color3);
+}
+.footer .link {
+    padding: 16px 0;
+}
+.footer .link a {
+    color: var(--color1);
+    margin: 0px 16px;
+}
+.footer .link a:hover {
+    color: var(--color3);
+}
+.footer .credit {
+    padding: 16px 0;
+}
+.footer .credit span {
+    color: var(--color3);
+}
+
+/* Laptop */
+@media(max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+    
+    .category {
+        margin-top: 50px;
+    }
+}
+
+/* Tablet */
+@media(max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+    
+    #x {
+        width: fit-content;
+        height: 40px;
+        margin-left: 75%;
+        display: inline-block;
+    }
+
+    #hamburgerMenu {
+        display: inline-block;
+    }
+
+    .navBar .navBar1 {
+        position: absolute;
+        top: 0;
+        right: -100%;
+        background-color: var(--color3);
+        width: 250px;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    .navBar .navBar1.active {
+        right: 0;
+    }
+
+    .navBar .navBar1 a {
+        color: var(--color1);
+        display: block;
+        margin: 24px;
+        padding: 8px;
+        width: fit-content;
+        transition: 0.3s linear;
+        font-size: 16px;
+    }
+    .navBar .navBar1 a:hover {
+        color: var(--color2);
+    }
+    .navBar .navBar1 a::after {
+        content: '';
+        display: block;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--color2);
+        transform: scaleX(0);
+        transition: 0.3s linear;
+        transform-origin: 0 0;
+    }
+    .navBar .navBar1 a:hover::after {
+        transform: scaleX(1);
+    }
+
+    #x::after {
+        border-bottom: none;
+    }
+    #x:hover::after {
+        border-bottom: none;
+        transform: scaleX(1);
+    }
+    #promotion {
+        color: var(--color2);
+        border-bottom: none;
+        transform: scaleX(1);
+    }
+    #promotion::after {
+        border-bottom: 1px solid var(--color2);
+        transform: scaleX(1);
+    }
+    #promotion:hover::after {
+        transform: scaleX(1);
+    }
+}
+
+/* Mobile */
+@media(max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}

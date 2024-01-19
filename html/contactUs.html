@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>guarJIan | Contact Us</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
+    <!-- fonts.google.com -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    
+    <!-- feathericons.com -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="../js/contactUs.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/contactUs.css">
+</head>
+<body>
+    <nav class="navBar">
+        <a href="home.html" class="logo"><img src="../assets/logo.png" alt="guarJIan" id="logo"></a>
+        <div class="navBar1">
+            <a href="" id="x"><i data-feather="x"></i></a>
+            <a href="home.html" id="home">Home</a>
+            <a href="promotion.html" id="promotion">Promotion</a>
+            <a href="product.html" id="product">Product</a>
+            <a href="aboutUs.html" id="aboutUs">About Us</a>
+            <a href="contactUs.html" id="contactUs">Contact Us</a>
+        </div>
+        <a href="" id="hamburgerMenu"><i data-feather="menu"></i></a>
+    </nav>
+
+    <section class="contact">
+        <img src="../assets/favicon.png" alt="logo">
+        <h1>Contact Us</h1>
+        <p>Feel free to reach out to us with any questions, feedback, or inquiries. We'd love to hear from you!</p>
+        <div class="contactForm">
+            <form onsubmit="return validateForm()">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="10"></textarea>
+                <input type="checkbox" name="checkbox" id="checkbox"><br>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="socialMedia">
+            <a target=”_blank” href="https://www.instagram.com/"><i data-feather="instagram"></i></a>
+            <a target=”_blank” href="https://www.twitter.com/"><i data-feather="twitter"></i></a>
+            <a target=”_blank” href="https://www.facebook.com/"><i data-feather="facebook"></i></a>
+        </div>
+        <div class="link">
+            <a href="home.html">Home</a>
+            <a href="promotion.html">Promotion</a>
+            <a href="product.html">Product</a>
+            <a href="aboutUs.html">About Us</a>
+            <a href="contactUs.html">Contact Us</a>
+        </div>
+        <div class="credit">
+            <p>&copy; 2023 <span>guarJIan</span> created by <span>Ivander Hanson Setyawan</span>, All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- feathericons.com -->
+    <script>
+        feather.replace()
+    </script>
+
+    <!-- JavaScript -->
+    <script src="../js/hamburgerMenu.js"></script>
+</body>
+</html>
