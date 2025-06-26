@@ -305,11 +305,19 @@ body {
     #home:hover::after {
         transform: scaleX(1);
     }
+
+    .store .content h1 {
+        font-size: 75px;
+    }
 }
 
 /* Mobile */
 @media(max-width: 450px) {
     html {
         font-size: 55%;
+    }
+
+    .store .content h1 {
+        font-size: 50px;
     }
 }
