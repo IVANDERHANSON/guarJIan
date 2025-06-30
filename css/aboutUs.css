@@ -238,11 +238,19 @@ iframe {
     #aboutUs:hover::after {
         transform: scaleX(1);
     }
+
+    .content {
+        margin: 100px;
+    }
 }
 
 /* Mobile */
 @media(max-width: 450px) {
     html {
         font-size: 55%;
+    }
+
+    .content {
+        margin: 50px;
     }
 }

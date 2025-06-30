@@ -276,11 +276,19 @@ body {
     #contactUs:hover::after {
         transform: scaleX(1);
     }
+
+    .contact {
+        margin: 100px;
+    }
 }
 
 /* Mobile */
 @media(max-width: 450px) {
     html {
         font-size: 55%;
+    }
+
+    .contact {
+        margin: 50px;
     }
 }
